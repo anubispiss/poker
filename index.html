@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retro Poker Bot</title>
+    <!-- Google Font: Press Start 2P -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="scanline-overlay"></div> <!-- For CRT effect -->
+
+    <div class="game-container">
+        <h1>RETRO POKER BOT</h1>
+
+        <div class="credits-display">
+            <span class="player-credits">Player Credits: <span id="player-credits">100</span></span>
+            <span class="bot-credits">Bot Credits: <span id="bot-credits">100</span></span>
+        </div>
+
+        <div class="game-area">
+            <!-- Bot's Hand -->
+            <div class="hand-area bot-area">
+                <h2>BOT HAND</h2>
+                <div class="cards" id="bot-cards">
+                    <!-- Bot cards appear here -->
+                </div>
+            </div>
+
+            <!-- Table Center: Pot & Messages -->
+            <div class="table-center">
+                <div class="pot-display">
+                    POT: <span id="pot">0</span>
+                </div>
+                <div class="message-area" id="message">
+                    Welcome to Retro Poker! Ante up!
+                </div>
+                <button id="deal-button">DEAL NEW HAND</button>
+            </div>
+
+            <!-- Player's Hand -->
+            <div class="hand-area player-area">
+                <h2>YOUR HAND</h2>
+                <div class="cards" id="player-cards">
+                    <!-- Player cards appear here -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="action-buttons" id="action-area">
+            <!-- Betting actions -->
+            <button id="check-button" class="action-button" disabled>CHECK</button>
+            <button id="bet-button" class="action-button" disabled>BET <span class="bet-amount">(10)</span></button>
+            <button id="call-button" class="action-button" disabled>CALL <span class="bet-amount">(10)</span></button>
+            <button id="raise-button" class="action-button" disabled>RAISE <span class="bet-amount">(20)</span></button>
+            <!-- Simple raise for now -->
+            <button id="fold-button" class="action-button" disabled>FOLD</button>
+            <!-- Drawing action -->
+            <button id="draw-button" class="action-button" disabled>DRAW CARDS</button>
+        </div>
+
+    </div> <!-- End of game-container -->
+
+    <!-- Added Footer Section -->
+    <footer class="game-footer">
+        <p>-- HOW TO PLAY 5-CARD DRAW --</p>
+        <p>OBJECTIVE: Make the best 5-card poker hand after one draw.</p>
+        <p>HAND FLOW: 1. ANTE | 2. DEAL | 3. BETTING ROUND 1 | 4. DRAW | 5. BETTING ROUND 2 | 6. SHOWDOWN</p>
+        <p>ACTIONS: Use the buttons that appear. CHECK (pass if no bet), BET (make the first bet), CALL (match bot's
+            bet), FOLD (quit hand), DRAW (click cards to discard, then click DRAW).</p>
+        <p>HAND RANKS (Best to Worst): Royal Flush > Straight Flush > 4 of a Kind > Full House > Flush > Straight > 3 of
+            a Kind > Two Pair > Pair > High Card.</p>
+        <p>KEY BINDINGS: None currently implemented. Please use the mouse to click buttons and cards.</p>
+    </footer>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
